@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+    //var card string = "Ace of Spades"
+    //card := "Ace of Spades" // := Similar to auto in C++, only needed when assigning a new variable
+
+    //card := newCard() // Assigns the return type to card 
+
+    cards := []string{"Ace of Diamonds", newCard()}
+    cards = append(cards, "Six of Spades")
+
+    for i, card := range cards {
+        fmt.Println(i, card)
+    }
+}
+
+func newCard() string { // Need to tell what data type is being returned for the function
+    return "Five of Diamonds"
+}
